@@ -9,12 +9,12 @@ contract handling{
     }
     
     function error1()public view returns(uint){
-        require(msg.sender==owner,"Only owner can add");
+        require(msg.sender==owner,"Only owner can access");
         uint c=a * b;
         return c;
     }
     function error2()public view{
-        if(b>50){
+        if(b<50){
             revert("B should be greater than 50");
         }
         
